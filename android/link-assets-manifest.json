@@ -1,0 +1,41 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/DarkerGrotesque-Black.ttf",
+      "sha1": "5f2227e216179f1bddfaa850a95e203ca5034781"
+    },
+    {
+      "path": "src/assets/fonts/DarkerGrotesque-Bold.ttf",
+      "sha1": "a03dc459a3695c29cac2667600e92fedae8bc3f3"
+    },
+    {
+      "path": "src/assets/fonts/DarkerGrotesque-ExtraBold.ttf",
+      "sha1": "c296670c5cd504e80fae913243c12f443cb4c6ea"
+    },
+    {
+      "path": "src/assets/fonts/DarkerGrotesque-Light.ttf",
+      "sha1": "7f942f8a3eda54657be88f177ea78b832e4a4bdd"
+    },
+    {
+      "path": "src/assets/fonts/DarkerGrotesque-Medium.ttf",
+      "sha1": "4a78b202872edfa9fa2f1bb787a9efd282db4d30"
+    },
+    {
+      "path": "src/assets/fonts/DarkerGrotesque-Regular.ttf",
+      "sha1": "911b52a41167cefd8a53ed4f7d5bd35876df27e8"
+    },
+    {
+      "path": "src/assets/fonts/DarkerGrotesque-SemiBold.ttf",
+      "sha1": "861e01340ac865e9f1dd922ea6a2d24c4729cbea"
+    },
+    {
+      "path": "src/assets/fonts/NunitoSans_10pt-Regular.ttf",
+      "sha1": "c4bc36919dfa9ee086b71d7b2796fafc22249b97"
+    },
+    {
+      "path": "src/assets/fonts/NunitoSans_7pt-Regular.ttf",
+      "sha1": "466635ba024c43f741e320148a159557fd732ec0"
+    }
+  ]
+}
