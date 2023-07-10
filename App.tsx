@@ -1,17 +1,18 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 import store from './src/stores';
+import BottomTabs from './src/navigations/BottomTabs';
 
 function App(): JSX.Element {
   console.log('meong');
 
   return (
     <Provider store={store}>
-      <View>
-        <Text>Test</Text>
-      </View>
+      <NavigationContainer>
+        <BottomTabs />
+      </NavigationContainer>
     </Provider>
   );
 }

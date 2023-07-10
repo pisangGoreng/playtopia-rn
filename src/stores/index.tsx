@@ -30,18 +30,8 @@ const store = configureStore({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware({
     serializableCheck: false,
-  }).concat(
-    api.middleware,
-
-    // logger,
-    createDebugger(),
-  ), // NOTE this addition
+  }).concat(api.middleware, logger, createDebugger()), // NOTE this addition
 });
-
-// if (__DEV__) {
-//   const createDebugger = require('redux-flipper').default;
-//   middlewares.push(createDebugger());
-// }
 
 export const persistor = persistStore(store);
 
