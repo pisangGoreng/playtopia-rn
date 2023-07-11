@@ -52,7 +52,7 @@ const globalStyles = StyleSheet.create({
   },
   // * NUNITO
   nunito10: {
-    fontFamily: 'NunitoSans_10pt-Regular',
+    fontFamily: 'NunitoSans_7pt-Regular',
     fontSize: scaleFontsSize(10),
     fontWeight: '400',
     color: COLORS.black,
