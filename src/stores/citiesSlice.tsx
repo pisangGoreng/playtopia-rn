@@ -1,11 +1,14 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {Icity} from '../typings/cities';
 
 export interface CitiesState {
   searchParams: string;
+  cities: Icity[];
 }
 
 const initialState: CitiesState = {
   searchParams: '',
+  cities: [],
 };
 
 export const citiesSlice = createSlice({

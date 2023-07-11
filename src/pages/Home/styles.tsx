@@ -19,13 +19,16 @@ const styles = StyleSheet.create({
     zIndex: 10,
     alignSelf: 'center',
     top: verticalScale(162),
-    flex: 1,
+
     justifyContent: 'center',
     alignItems: 'center',
+    // backgroundColor: 'red',
     // backgroundColor: COLORS.pictonBlue,
     // height: 3000,
+    width: '100%',
   },
   searchSectionContainer: {
+    // flex: 1,
     width: '100%',
     // height: verticalScale(354),
     // height: verticalScale(1654),

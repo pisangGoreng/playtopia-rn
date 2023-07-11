@@ -4,6 +4,9 @@ import {horizontalScale, scaleFontsSize} from '../../utils/scaling';
 import {COLORS} from '../../utils/colors';
 
 const globalStyles = StyleSheet.create({
+  flex1: {
+    flexGrow: 1,
+  },
   rowCenter: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -13,16 +16,22 @@ const globalStyles = StyleSheet.create({
     paddingHorizontal: horizontalScale(16),
   },
   shadow: {
-    shadowColor: 'rgba(0, 0, 0, 0.10)',
+    shadowColor: '#000000',
     shadowOffset: {
       width: 0,
       height: 6,
     },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.1,
     shadowRadius: 5.62,
     elevation: 8,
   },
   // * GROTESQUE
+  grotesque14: {
+    fontFamily: 'DarkerGrotesque-Regular',
+    fontSize: scaleFontsSize(14),
+    fontWeight: '400',
+    color: COLORS.black,
+  },
   grotesque14Bold: {
     fontFamily: 'DarkerGrotesque-Regular',
     fontSize: scaleFontsSize(14),

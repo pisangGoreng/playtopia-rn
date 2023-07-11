@@ -23,6 +23,8 @@ export const rootReducer = combineReducers({
   cities: citiesReducer,
 });
 
+export type IRootState = ReturnType<typeof store.getState>;
+
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
@@ -30,7 +32,11 @@ const store = configureStore({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware({
     serializableCheck: false,
-  }).concat(api.middleware, logger, createDebugger()), // NOTE this addition
+  }).concat(
+    api.middleware,
+    // logger,
+    createDebugger(),
+  ),
 });
 
 export const persistor = persistStore(store);
@@ -40,4 +46,4 @@ setupListeners(store.dispatch);
 export default store;
 
 // * for reset all reducer state
-persistor.purge();
+// persistor.purge();

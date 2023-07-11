@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginLeft: horizontalScale(2),
     justifyContent: 'flex-end',
+    alignItems: 'center',
   },
   iconContainer: {
     marginBottom: verticalScale(8),
@@ -32,9 +33,6 @@ const styles = StyleSheet.create({
     width: horizontalScale(40),
     height: horizontalScale(40),
     borderRadius: horizontalScale(20),
-  },
-  label: {
-    alignSelf: 'center',
   },
 });
 

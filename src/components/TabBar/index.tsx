@@ -12,9 +12,18 @@ import PlayCard from '../../assets/icons/svg/playCard.svg';
 import globalStyles from '../../assets/styles/globalStyles';
 import {verticalScale} from '../../utils/scaling';
 
+const {nunito12} = globalStyles;
+const {
+  tabBarContainer,
+  buttonContainer,
+  iconContainer,
+  iconTabContainer,
+  iconTabContainerPlayCard,
+} = styles;
+
 const TabBar = ({state, descriptors, navigation}) => {
   return (
-    <View style={styles.tabBarContainer}>
+    <View style={tabBarContainer}>
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];
         const label =
@@ -57,17 +66,17 @@ const TabBar = ({state, descriptors, navigation}) => {
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={styles.buttonContainer}>
+            style={buttonContainer}>
             <View
               style={[
-                styles.iconContainer,
+                iconContainer,
                 label === ROUTES.PlayCard && {marginBottom: verticalScale(5)},
               ]}>
               <View
                 style={[
-                  styles.iconTabContainer,
+                  iconTabContainer,
                   {backgroundColor: tabColor},
-                  label === ROUTES.PlayCard && styles.iconTabContainerPlayCard,
+                  label === ROUTES.PlayCard && iconTabContainerPlayCard,
                 ]}>
                 {label === ROUTES.Home && <Home fill={iconColor} />}
 
@@ -83,8 +92,7 @@ const TabBar = ({state, descriptors, navigation}) => {
 
             <Text
               style={[
-                styles.label,
-                globalStyles.nunito12,
+                nunito12,
                 {
                   color:
                     label === ROUTES.PlayCard ? COLORS.mexicanPink : textColor,

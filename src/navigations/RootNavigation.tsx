@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
 export const RootNavigation = () => {
   return (
     <Stack.Navigator
-      // initialRouteName={ROUTES.PlayCard}
+      initialRouteName={ROUTES.PlayCard}
       screenOptions={{header: () => null, headerShown: false}}>
       <Stack.Screen name={ROUTES.Home} component={Home} />
       <Stack.Screen name={ROUTES.Akun} component={Akun} />
