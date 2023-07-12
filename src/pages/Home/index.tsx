@@ -53,12 +53,12 @@ const Home = (): JSX.Element => {
 
   return (
     <SafeAreaView style={pagesContainer}>
-      <ScrollView style={flex1} contentContainerStyle={flex1}>
-        <View style={[flex1, {height}]}>
-          <ImageBackground
-            source={require('../../assets/images/png/home-background.png')}
-            resizeMode="cover"
-            style={backgroundContainer}>
+      <ImageBackground
+        source={require('../../assets/images/png/home-background.png')}
+        resizeMode="cover"
+        style={backgroundContainer}>
+        <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
+          <View style={[{flex: 1}, {height: 1300}]}>
             <View style={topContainer}>
               <View>
                 <Text style={[nunito12Bold, {color: carulean}]}>Hi,</Text>
@@ -73,37 +73,14 @@ const Home = (): JSX.Element => {
             <View style={contentContainer}>
               <View style={[shadow, searchSectionContainer]}>
                 <PlayMiles xpValue={350} milesPoint={50000} />
-                <CityFilter />
-              </View>
-
-              <View style={bannerContainer}>
-                <Text style={[grotesque20Bold]}>Info & Promo</Text>
-
-                <ScrollView
-                  horizontal
-                  style={styles.bannerScrollContainer}
-                  showsHorizontalScrollIndicator={false}>
-                  {banners.map((banner, index) => {
-                    const {description, buttonText, buttonColor, onPress} =
-                      banner;
-                    return (
-                      <View key={index} style={styles.bannerItemContainer}>
-                        <Banner
-                          imageUrl={require('../../assets/images/png/banner-1.png')}
-                          description={description}
-                          buttonText={buttonText}
-                          buttonColor={buttonColor}
-                          onPress={onPress}
-                        />
-                      </View>
-                    );
-                  })}
-                </ScrollView>
+                <View>
+                  <CityFilter />
+                </View>
               </View>
             </View>
-          </ImageBackground>
-        </View>
-      </ScrollView>
+          </View>
+        </ScrollView>
+      </ImageBackground>
     </SafeAreaView>
   );
 };

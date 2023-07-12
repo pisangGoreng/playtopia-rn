@@ -21,12 +21,32 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     flex: 1,
   },
-  citiesContainer: {
-    marginTop: verticalScale(12),
-    marginLeft: horizontalScale(16),
+  scrollContainer: {
+    alignItems: 'center',
+    paddingTop: verticalScale(20),
   },
   cityContainer: {
     marginRight: horizontalScale(16),
+  },
+  // citiesContainer: {
+  //   alignItems: 'center',
+  //   paddingTop: verticalScale(20),
+  // },
+  citiesScrollContainer: {
+    paddingLeft: horizontalScale(16),
+    width: '100%',
+  },
+  baseScrollBar: {
+    height: verticalScale(6),
+    width: horizontalScale(48),
+    borderRadius: 5,
+    backgroundColor: COLORS.whiteSmoke,
+  },
+  activeScrollBar: {
+    height: verticalScale(6),
+    width: horizontalScale(9),
+    borderRadius: 4,
+    backgroundColor: COLORS.pictonBlue,
   },
   notFound: {
     flex: 1,

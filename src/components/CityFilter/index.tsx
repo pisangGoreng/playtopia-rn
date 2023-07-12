@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, ScrollView} from 'react-native';
 import {useSelector} from 'react-redux';
+import ScrollIndicator from 'react-native-custom-scroll-indicator';
 
 import styles from './styles';
 import globalStyles from '../../assets/styles/globalStyles';
@@ -11,6 +12,7 @@ import CitySkeleton from '../CitySkeleton';
 import City from '../City';
 import {Icity} from '../../typings/cities';
 import {IRootState} from '../../stores';
+import {horizontalScale, verticalScale} from '../../utils/scaling';
 
 const {grotesque20Bold, rowCenter, ph16, nunito12Bold, flex1, grotesque18Bold} =
   globalStyles;
@@ -19,9 +21,12 @@ const {
   searchBarContainer,
   horionztalLine,
   horionztalLineSeparator,
-  citiesContainer,
   cityContainer,
   notFound,
+  scrollContainer,
+  baseScrollBar,
+  activeScrollBar,
+  citiesScrollContainer,
 } = styles;
 
 const CityFilter = () => {
@@ -34,6 +39,11 @@ const CityFilter = () => {
   const filteredCities =
     Array.isArray(cities) &&
     cities.filter(({name}) => name.includes(searchParams));
+
+  const showCustomScrollBar =
+    Array.isArray(filteredCities) && filteredCities.length === 0
+      ? 'none'
+      : 'flex';
 
   return (
     <View style={filterContainer}>
@@ -51,11 +61,12 @@ const CityFilter = () => {
         <View style={horionztalLine} />
       </View>
 
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={citiesContainer}
-        contentContainerStyle={flex1}>
+      <ScrollIndicator
+        viewBoxStyle={scrollContainer}
+        indicatorBackgroundStyle={baseScrollBar}
+        indicatorStyle={activeScrollBar}
+        indicatorBoxStyle={{display: showCustomScrollBar}}
+        scrollViewBoxStyle={citiesScrollContainer}>
         {isLoading && <CitySkeleton />}
 
         {Array.isArray(filteredCities) &&
@@ -69,7 +80,7 @@ const CityFilter = () => {
         {Array.isArray(filteredCities) && filteredCities.length === 0 && (
           <Text style={[notFound, grotesque18Bold]}>Tidak ditemukan</Text>
         )}
-      </ScrollView>
+      </ScrollIndicator>
     </View>
   );
 };

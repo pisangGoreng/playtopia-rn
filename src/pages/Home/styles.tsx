@@ -10,9 +10,10 @@ const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   backgroundContainer: {
+    flex: 1,
     width,
     height: verticalScale(190),
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
   },
   topContainer: {
     flexDirection: 'row',
@@ -23,13 +24,14 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingHorizontal: horizontalScale(16),
-    position: 'absolute',
-    zIndex: 10,
+    // position: 'absolute',
+    // zIndex: 10,
+
     alignSelf: 'center',
     top: verticalScale(153),
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: 'red',
+    backgroundColor: 'red',
     // backgroundColor: COLORS.pictonBlue,
     // height: 3000,
     width: '100%',
