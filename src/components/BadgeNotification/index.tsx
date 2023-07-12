@@ -13,6 +13,7 @@ const BadgeNotification: React.FC<any> = () => {
 
   return (
     <Button
+      testID="badge-notificai"
       activeOpacity={0.5}
       onPress={() => console.log('notif badge pressed')}>
       <View style={container}>

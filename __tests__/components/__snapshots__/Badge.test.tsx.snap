@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello renders the correct message 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "red",
+        "height": 24,
+        "width": 24,
+      },
+      {
+        "borderRadius": 12,
+      },
+    ]
+  }
+  testID="badge-container"
+>
+  <Text>
+    Children
+  </Text>
+</View>
+`;
+
+exports[`Should render a Badge component renders the correct component 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "red",
+        "height": 24,
+        "width": 24,
+      },
+      {
+        "borderRadius": 12,
+      },
+    ]
+  }
+  testID="badge-container"
+>
+  <Text>
+    Children
+  </Text>
+</View>
+`;
+
+exports[`Should render a Badge component renders the correct message 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "red",
+        "height": 24,
+        "width": 24,
+      },
+      {
+        "borderRadius": 12,
+      },
+    ]
+  }
+  testID="badge-container"
+>
+  <Text>
+    Children
+  </Text>
+</View>
+`;
