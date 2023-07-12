@@ -4,6 +4,10 @@ import {horizontalScale, scaleFontsSize} from '../../utils/scaling';
 import {COLORS} from '../../utils/colors';
 
 const globalStyles = StyleSheet.create({
+  statusBarIos: {
+    flex: 0,
+    backgroundColor: COLORS.skyBlue,
+  },
   pagesContainer: {
     flex: 1,
     backgroundColor: COLORS.whiteSmoke,

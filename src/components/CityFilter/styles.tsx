@@ -28,13 +28,10 @@ const styles = StyleSheet.create({
   cityContainer: {
     marginRight: horizontalScale(16),
   },
-  // citiesContainer: {
-  //   alignItems: 'center',
-  //   paddingTop: verticalScale(20),
-  // },
   citiesScrollContainer: {
     paddingLeft: horizontalScale(16),
     width: '100%',
+    flexDirection: 'row',
   },
   baseScrollBar: {
     height: verticalScale(6),
@@ -49,9 +46,10 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.pictonBlue,
   },
   notFound: {
-    flex: 1,
-    height: verticalScale(105),
-    textAlign: 'center',
+    height: verticalScale(123.5),
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
     color: COLORS.indigoDye,
   },
 });

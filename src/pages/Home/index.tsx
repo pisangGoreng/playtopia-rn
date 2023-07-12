@@ -6,6 +6,7 @@ import {
   ScrollView,
   ImageBackground,
   Dimensions,
+  StatusBar,
 } from 'react-native';
 
 import styles from './styles';
@@ -15,6 +16,7 @@ import CityFilter from '../../components/CityFilter';
 import BadgeNotification from '../../components/BadgeNotification';
 import {COLORS} from '../../utils/colors';
 import Banner from '../../components/Banner';
+// import StatusBar from '../../components/StatusBar';
 
 const {
   nunito12Bold,
@@ -23,6 +25,7 @@ const {
   shadow,
   pagesContainer,
   flex1,
+  statusBarIos,
 } = globalStyles;
 const {
   contentContainer,
@@ -49,39 +52,70 @@ const banners = [
 ];
 
 const Home = (): JSX.Element => {
-  const height = Dimensions.get('window').height + 50;
+  const height = Dimensions.get('window').height - 50;
 
   return (
-    <SafeAreaView style={pagesContainer}>
-      <ImageBackground
-        source={require('../../assets/images/png/home-background.png')}
-        resizeMode="cover"
-        style={backgroundContainer}>
-        <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
-          <View style={[{flex: 1}, {height: 1300}]}>
-            <View style={topContainer}>
-              <View>
-                <Text style={[nunito12Bold, {color: carulean}]}>Hi,</Text>
-                <Text style={[grotesque14Bold, {color: carulean}]}>
-                  Cameron Williamson
-                </Text>
+    <>
+      <SafeAreaView style={statusBarIos} />
+      <SafeAreaView style={pagesContainer}>
+        <StatusBar animated={true} backgroundColor={COLORS.skyBlue} />
+        <ImageBackground
+          source={require('../../assets/images/png/home-background.png')}
+          resizeMode="cover"
+          style={backgroundContainer}>
+          <ScrollView
+            style={flex1}
+            contentContainerStyle={flex1}
+            keyboardShouldPersistTaps="always">
+            <View style={[flex1, {height}]}>
+              <View style={topContainer}>
+                <View>
+                  <Text style={[nunito12Bold, {color: carulean}]}>Hi,</Text>
+                  <Text style={[grotesque14Bold, {color: carulean}]}>
+                    Cameron Williamson
+                  </Text>
+                </View>
+
+                <BadgeNotification />
               </View>
 
-              <BadgeNotification />
-            </View>
+              <View style={contentContainer}>
+                <View style={[shadow, searchSectionContainer]}>
+                  <PlayMiles xpValue={350} milesPoint={50000} />
+                  <View>
+                    <CityFilter />
+                  </View>
+                </View>
 
-            <View style={contentContainer}>
-              <View style={[shadow, searchSectionContainer]}>
-                <PlayMiles xpValue={350} milesPoint={50000} />
-                <View>
-                  <CityFilter />
+                <View style={bannerContainer}>
+                  <Text style={[grotesque20Bold]}>Info & Promo</Text>
+                  <ScrollView
+                    horizontal
+                    style={styles.bannerScrollContainer}
+                    showsHorizontalScrollIndicator={false}>
+                    {banners.map((banner, index) => {
+                      const {description, buttonText, buttonColor, onPress} =
+                        banner;
+                      return (
+                        <View key={index} style={styles.bannerItemContainer}>
+                          <Banner
+                            imageUrl={require('../../assets/images/png/banner-1.png')}
+                            description={description}
+                            buttonText={buttonText}
+                            buttonColor={buttonColor}
+                            onPress={onPress}
+                          />
+                        </View>
+                      );
+                    })}
+                  </ScrollView>
                 </View>
               </View>
             </View>
-          </View>
-        </ScrollView>
-      </ImageBackground>
-    </SafeAreaView>
+          </ScrollView>
+        </ImageBackground>
+      </SafeAreaView>
+    </>
   );
 };
 

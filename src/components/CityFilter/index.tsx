@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 import ScrollIndicator from 'react-native-custom-scroll-indicator';
 
@@ -12,9 +12,8 @@ import CitySkeleton from '../CitySkeleton';
 import City from '../City';
 import {Icity} from '../../typings/cities';
 import {IRootState} from '../../stores';
-import {horizontalScale, verticalScale} from '../../utils/scaling';
 
-const {grotesque20Bold, rowCenter, ph16, nunito12Bold, flex1, grotesque18Bold} =
+const {grotesque20Bold, rowCenter, ph16, nunito12Bold, grotesque18Bold} =
   globalStyles;
 const {
   filterContainer,
@@ -38,7 +37,9 @@ const CityFilter = () => {
 
   const filteredCities =
     Array.isArray(cities) &&
-    cities.filter(({name}) => name.includes(searchParams));
+    cities.filter(item => {
+      return item.name.toLowerCase().indexOf(searchParams.toLowerCase()) !== -1;
+    });
 
   const showCustomScrollBar =
     Array.isArray(filteredCities) && filteredCities.length === 0
@@ -61,6 +62,12 @@ const CityFilter = () => {
         <View style={horionztalLine} />
       </View>
 
+      {Array.isArray(filteredCities) && filteredCities.length === 0 && (
+        <View style={notFound}>
+          <Text style={grotesque18Bold}>Tidak ditemukan</Text>
+        </View>
+      )}
+
       <ScrollIndicator
         viewBoxStyle={scrollContainer}
         indicatorBackgroundStyle={baseScrollBar}
@@ -76,10 +83,6 @@ const CityFilter = () => {
               <City name={city.name} onPress={() => console.log(city)} />
             </View>
           ))}
-
-        {Array.isArray(filteredCities) && filteredCities.length === 0 && (
-          <Text style={[notFound, grotesque18Bold]}>Tidak ditemukan</Text>
-        )}
       </ScrollIndicator>
     </View>
   );

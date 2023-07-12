@@ -6,14 +6,11 @@ import {
 } from '../../utils/scaling';
 import {COLORS} from '../../utils/colors';
 
-const {width, height} = Dimensions.get('window');
-
 const styles = StyleSheet.create({
   backgroundContainer: {
     flex: 1,
-    width,
+    width: Dimensions.get('window').width,
     height: verticalScale(190),
-    // backgroundColor: 'red',
   },
   topContainer: {
     flexDirection: 'row',
@@ -24,26 +21,16 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingHorizontal: horizontalScale(16),
-    // position: 'absolute',
-    // zIndex: 10,
-
     alignSelf: 'center',
-    top: verticalScale(153),
+    top: verticalScale(92),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
-    // backgroundColor: COLORS.pictonBlue,
-    // height: 3000,
     width: '100%',
   },
   searchSectionContainer: {
-    // flex: 1,
     width: '100%',
-    // height: verticalScale(354),
-    // height: verticalScale(1654),
     borderRadius: scaleFontsSize(24),
     backgroundColor: COLORS.white,
-    // backgroundColor: 'red',
     paddingVertical: verticalScale(16),
   },
 
