@@ -7,10 +7,21 @@ import globalStyles from '../../assets/styles/globalStyles';
 
 import ProgressBar from '../ProgressBar';
 import Badge from '../Badge';
-import {horizontalScale, verticalScale} from '../../utils/scaling';
+import {horizontalScale} from '../../utils/scaling';
 import BadgeIcon from '../../assets/icons/svg/badge.svg';
 import ArrowRight from '../../assets/icons/svg/arrow-right.svg';
 import Button from '../Button';
+
+const {nunito10, nunito10Bold, nunito12Bold, rowCenter} = globalStyles;
+const {
+  playMilesContainer,
+  playMilesItemContainer,
+  playMilesItemContainerLeft,
+  progressContainer,
+  playMilesItemContainerRight,
+  textMilesContainer,
+} = styles;
+const {tyrianPurple, schoolBusYellow, indigoDye, fieldDrab, murrey} = COLORS;
 
 type PlayMilesProps = {
   xpValue: number;
@@ -19,46 +30,36 @@ type PlayMilesProps = {
 
 const PlayMiles: React.FC<PlayMilesProps> = ({xpValue, milesPoint}) => {
   return (
-    <View style={styles.playMilesContainer}>
-      <View
-        style={[
-          styles.playMilesItemContainer,
-          styles.playMilesItemContainerLeft,
-        ]}>
-        <Text style={[globalStyles.nunito10, {color: COLORS.indigoDye}]}>
-          <Text style={globalStyles.nunito10Bold} testID="value-play-miles">
+    <View style={playMilesContainer}>
+      <View style={[playMilesItemContainer, playMilesItemContainerLeft]}>
+        <Text style={[nunito10, {color: indigoDye}]}>
+          <Text style={nunito10Bold} testID="value-play-miles">
             {xpValue} XP
           </Text>{' '}
           lagi jadi playlover
         </Text>
 
-        <View style={styles.progressContainer}>
+        <View style={progressContainer}>
           <ProgressBar percent={25} />
         </View>
       </View>
 
-      <View
-        style={[
-          styles.playMilesItemContainer,
-          styles.playMilesItemContainerRight,
-        ]}>
-        <View style={globalStyles.rowCenter}>
+      <View style={[playMilesItemContainer, playMilesItemContainerRight]}>
+        <View style={rowCenter}>
           <Badge
             isRounded={true}
             customStyle={{
               size: horizontalScale(24),
-              backgroundColor: COLORS.schoolBusYellow,
+              backgroundColor: schoolBusYellow,
             }}>
-            <BadgeIcon fill={COLORS.fieldDrab} />
+            <BadgeIcon fill={fieldDrab} />
           </Badge>
 
-          <View style={styles.textMilesContainer}>
-            <Text style={[globalStyles.nunito10, {color: COLORS.tyrianPurple}]}>
-              PLAY MILES
-            </Text>
+          <View style={textMilesContainer}>
+            <Text style={[nunito10, {color: tyrianPurple}]}>PLAY MILES</Text>
             <Text
               testID="value-miles-point"
-              style={[globalStyles.nunito12Bold, {color: COLORS.tyrianPurple}]}>
+              style={[nunito12Bold, {color: tyrianPurple}]}>
               {milesPoint}
             </Text>
           </View>
@@ -67,7 +68,7 @@ const PlayMiles: React.FC<PlayMilesProps> = ({xpValue, milesPoint}) => {
         <Button
           activeOpacity={0.5}
           onPress={() => console.log('Button Pressed')}>
-          <ArrowRight fill={COLORS.murrey} />
+          <ArrowRight fill={murrey} />
         </Button>
       </View>
     </View>

@@ -20,6 +20,8 @@ const {
   iconTabContainer,
   iconTabContainerPlayCard,
 } = styles;
+const {pictonBlue, azure, white, prussianBLue, battleshipGray, mexicanPink} =
+  COLORS;
 
 const TabBar = ({state, descriptors, navigation}) => {
   return (
@@ -53,9 +55,10 @@ const TabBar = ({state, descriptors, navigation}) => {
           });
         };
 
-        const tabColor = isFocused ? COLORS.pictonBlue : COLORS.azure;
-        const iconColor = isFocused ? COLORS.white : COLORS.prussianBLue;
-        const textColor = isFocused ? COLORS.pictonBlue : COLORS.battleshipGray;
+        const tabColor = isFocused ? pictonBlue : azure;
+        const iconColor = isFocused ? white : prussianBLue;
+        const textColor = isFocused ? pictonBlue : battleshipGray;
+        const labelColor = label === ROUTES.PlayCard ? mexicanPink : textColor;
 
         return (
           <TouchableOpacity
@@ -90,16 +93,7 @@ const TabBar = ({state, descriptors, navigation}) => {
               </View>
             </View>
 
-            <Text
-              style={[
-                nunito12,
-                {
-                  color:
-                    label === ROUTES.PlayCard ? COLORS.mexicanPink : textColor,
-                },
-              ]}>
-              {label}
-            </Text>
+            <Text style={[nunito12, {color: labelColor}]}>{label}</Text>
           </TouchableOpacity>
         );
       })}

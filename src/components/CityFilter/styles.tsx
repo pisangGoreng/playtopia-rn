@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     marginTop: verticalScale(16),
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: 'red',
   },
   searchBarContainer: {
     marginVertical: verticalScale(12),
@@ -15,6 +14,7 @@ const styles = StyleSheet.create({
   },
   horionztalLineSeparator: {
     marginHorizontal: horizontalScale(8),
+    color: COLORS.battleshipGray,
   },
   horionztalLine: {
     borderBottomColor: COLORS.platinum,
@@ -28,12 +28,11 @@ const styles = StyleSheet.create({
   cityContainer: {
     marginRight: horizontalScale(16),
   },
-  notFoundContainer: {
-    // width: horizontalScale(107),
+  notFound: {
     flex: 1,
     height: verticalScale(105),
-    justifyContent: 'center',
-    alignItems: 'center',
+    textAlign: 'center',
+    color: COLORS.indigoDye,
   },
 });
 

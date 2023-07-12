@@ -17,4 +17,7 @@ export const COLORS = {
   murrey: '#99005B',
   platinum: '#DDDDDD',
   rust: '#BB3A00',
+  carulean: '#00729C',
+  red: '#FF2E29',
+  whiteSmoke: '#F3F3F3',
 };

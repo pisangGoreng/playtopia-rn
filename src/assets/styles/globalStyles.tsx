@@ -4,6 +4,10 @@ import {horizontalScale, scaleFontsSize} from '../../utils/scaling';
 import {COLORS} from '../../utils/colors';
 
 const globalStyles = StyleSheet.create({
+  pagesContainer: {
+    flex: 1,
+    backgroundColor: COLORS.whiteSmoke,
+  },
   flex1: {
     flexGrow: 1,
   },
@@ -16,7 +20,7 @@ const globalStyles = StyleSheet.create({
     paddingHorizontal: horizontalScale(16),
   },
   shadow: {
-    shadowColor: '#000000',
+    shadowColor: COLORS.black,
     shadowOffset: {
       width: 0,
       height: 6,
@@ -52,31 +56,31 @@ const globalStyles = StyleSheet.create({
   },
   // * NUNITO
   nunito10: {
-    fontFamily: 'NunitoSans_7pt-Regular',
+    fontFamily: 'NunitoSans10pt-Regular',
     fontSize: scaleFontsSize(10),
     fontWeight: '400',
     color: COLORS.black,
   },
   nunito10Bold: {
-    fontFamily: 'NunitoSans_10pt-Regular',
+    fontFamily: 'NunitoSans10pt-Regular',
     fontSize: scaleFontsSize(10),
     fontWeight: '700',
     color: COLORS.black,
   },
   nunito12: {
-    fontFamily: 'NunitoSans_10pt-Regular',
+    fontFamily: 'NunitoSans10pt-Regular',
     fontSize: scaleFontsSize(12),
     fontWeight: '400',
     color: COLORS.black,
   },
   nunito12Bold: {
-    fontFamily: 'NunitoSans_10pt-Regular',
+    fontFamily: 'NunitoSans10pt-Regular',
     fontSize: scaleFontsSize(12),
     fontWeight: '700',
     color: COLORS.black,
   },
   nunito14: {
-    fontFamily: 'NunitoSans_10pt-Regular',
+    fontFamily: 'NunitoSans10pt-Regular',
     fontSize: scaleFontsSize(14),
     fontWeight: '400',
     color: COLORS.black,

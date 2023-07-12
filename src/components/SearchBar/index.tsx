@@ -1,5 +1,5 @@
-import React, {useRef, useState} from 'react';
-import {View, Pressable, TextInput, Text, Keyboard} from 'react-native';
+import React, {useRef} from 'react';
+import {View, Pressable, TextInput, Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import globalStyles from '../../assets/styles/globalStyles';
@@ -9,23 +9,20 @@ import CloseIcon from '../../assets/icons/svg/close.svg';
 import SearchIcon from '../../assets/icons/svg/search.svg';
 import {updateSearchParams} from '../../stores/citiesSlice';
 import {IRootState} from '../../stores';
-import {useFilterCities} from '../../hooks/useFilterCities';
 
 import Badge from '../Badge';
 import Button from '../Button';
 import {COLORS} from '../../utils/colors';
 
 const {nunito14} = globalStyles;
-const {container, badgeContainer, badge, textInput} = styles;
+const {container, badgeContainer, remove, search, textInput} = styles;
 
-const SearchBar = props => {
+const SearchBar: React.FC<any> = () => {
   const dispatch = useDispatch();
   const searchParams = useSelector(
     (state: IRootState) => state.cities.searchParams,
   );
   const refInput = useRef(null);
-
-  // const {searchParams, handleFilter} = useFilterCities();
 
   return (
     <View style={container}>
@@ -39,13 +36,14 @@ const SearchBar = props => {
         onChangeText={text => dispatch(updateSearchParams(text))}
         style={[nunito14, textInput]}
         placeholder="Cari Lokasi Bermain"
+        placeholderTextColor={COLORS.battleshipGray}
         onSubmitEditing={Keyboard.dismiss}
       />
 
       <View style={badgeContainer}>
         {searchParams.length === 0 ? (
           <Button onPress={() => refInput.current.blur()}>
-            <Badge customStyle={styles.search} isRounded={true}>
+            <Badge customStyle={search} isRounded={true}>
               <PlusIcon />
             </Badge>
           </Button>
@@ -55,7 +53,7 @@ const SearchBar = props => {
               dispatch(updateSearchParams(''));
               refInput.current.focus();
             }}>
-            <Badge customStyle={styles.remove} isRounded={true}>
+            <Badge customStyle={remove} isRounded={true}>
               <CloseIcon fill={COLORS.white} />
             </Badge>
           </Button>

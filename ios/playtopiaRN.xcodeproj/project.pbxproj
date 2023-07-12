@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* playtopiaRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* playtopiaRNTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-playtopiaRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-playtopiaRN.a */; };
-		1160831CF9934EE4B98A9962 /* NunitoSans_10pt-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF76BC6F9040679B6BE09A /* NunitoSans_10pt-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		302D48E400394F20B03FE57D /* DarkerGrotesque-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3AA49430E56458C9CB3EA9F /* DarkerGrotesque-ExtraBold.ttf */; };
-		44DFD4C358D749E0877E96A9 /* NunitoSans_7pt-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1845D7815A940BC93591A75 /* NunitoSans_7pt-Regular.ttf */; };
 		6EBFE18E9F2D468486F9651F /* DarkerGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D1B1C2D2DB84249923E0FAA /* DarkerGrotesque-Medium.ttf */; };
 		729E649B683B4F5A9120BF09 /* DarkerGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F37C101B128B46F186B57DF0 /* DarkerGrotesque-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-playtopiaRN-playtopiaRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-playtopiaRN-playtopiaRNTests.a */; };
@@ -23,6 +21,8 @@
 		842F6743915D452EB09E0080 /* DarkerGrotesque-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B45C9379E7486B899121B4 /* DarkerGrotesque-Light.ttf */; };
 		9A05056B5EA94629B8730BB6 /* DarkerGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A341B69304B4F948AC4156D /* DarkerGrotesque-Bold.ttf */; };
 		B688B699E61C4FDD8BE67CED /* DarkerGrotesque-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E2DC2253E504520B5691DC9 /* DarkerGrotesque-Black.ttf */; };
+		2E6FDDE5AA914F909F1EF0F8 /* NunitoSans10pt-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03943C9173184DEBB8DCD1AF /* NunitoSans10pt-Regular.ttf */; };
+		C6E45B796FA0466DBBF3B7B9 /* NunitoSans7pt-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77FDA8D1237A4A6AABAC50C3 /* NunitoSans7pt-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = playtopiaRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = playtopiaRN/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-playtopiaRN-playtopiaRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-playtopiaRN-playtopiaRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CFF76BC6F9040679B6BE09A /* NunitoSans_10pt-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans_10pt-Regular.ttf"; path = "../src/assets/fonts/NunitoSans_10pt-Regular.ttf"; sourceTree = "<group>"; };
 		20B45C9379E7486B899121B4 /* DarkerGrotesque-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DarkerGrotesque-Light.ttf"; path = "../src/assets/fonts/DarkerGrotesque-Light.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-playtopiaRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playtopiaRN.debug.xcconfig"; path = "Target Support Files/Pods-playtopiaRN/Pods-playtopiaRN.debug.xcconfig"; sourceTree = "<group>"; };
 		3D1B1C2D2DB84249923E0FAA /* DarkerGrotesque-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DarkerGrotesque-Medium.ttf"; path = "../src/assets/fonts/DarkerGrotesque-Medium.ttf"; sourceTree = "<group>"; };
@@ -60,8 +59,9 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-playtopiaRN-playtopiaRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playtopiaRN-playtopiaRNTests.release.xcconfig"; path = "Target Support Files/Pods-playtopiaRN-playtopiaRNTests/Pods-playtopiaRN-playtopiaRNTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3AA49430E56458C9CB3EA9F /* DarkerGrotesque-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DarkerGrotesque-ExtraBold.ttf"; path = "../src/assets/fonts/DarkerGrotesque-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F1845D7815A940BC93591A75 /* NunitoSans_7pt-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans_7pt-Regular.ttf"; path = "../src/assets/fonts/NunitoSans_7pt-Regular.ttf"; sourceTree = "<group>"; };
 		F37C101B128B46F186B57DF0 /* DarkerGrotesque-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DarkerGrotesque-Regular.ttf"; path = "../src/assets/fonts/DarkerGrotesque-Regular.ttf"; sourceTree = "<group>"; };
+		03943C9173184DEBB8DCD1AF /* NunitoSans10pt-Regular.ttf */ = {isa = PBXFileReference; name = "NunitoSans10pt-Regular.ttf"; path = "../src/assets/fonts/NunitoSans10pt-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		77FDA8D1237A4A6AABAC50C3 /* NunitoSans7pt-Regular.ttf */ = {isa = PBXFileReference; name = "NunitoSans7pt-Regular.ttf"; path = "../src/assets/fonts/NunitoSans7pt-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +166,8 @@
 				3D1B1C2D2DB84249923E0FAA /* DarkerGrotesque-Medium.ttf */,
 				F37C101B128B46F186B57DF0 /* DarkerGrotesque-Regular.ttf */,
 				1147A3FAC9404B9D8426DDF5 /* DarkerGrotesque-SemiBold.ttf */,
-				1CFF76BC6F9040679B6BE09A /* NunitoSans_10pt-Regular.ttf */,
-				F1845D7815A940BC93591A75 /* NunitoSans_7pt-Regular.ttf */,
+				03943C9173184DEBB8DCD1AF /* NunitoSans10pt-Regular.ttf */,
+				77FDA8D1237A4A6AABAC50C3 /* NunitoSans7pt-Regular.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -287,8 +287,8 @@
 				6EBFE18E9F2D468486F9651F /* DarkerGrotesque-Medium.ttf in Resources */,
 				729E649B683B4F5A9120BF09 /* DarkerGrotesque-Regular.ttf in Resources */,
 				80817D1DC84048AA94116783 /* DarkerGrotesque-SemiBold.ttf in Resources */,
-				1160831CF9934EE4B98A9962 /* NunitoSans_10pt-Regular.ttf in Resources */,
-				44DFD4C358D749E0877E96A9 /* NunitoSans_7pt-Regular.ttf in Resources */,
+				2E6FDDE5AA914F909F1EF0F8 /* NunitoSans10pt-Regular.ttf in Resources */,
+				C6E45B796FA0466DBBF3B7B9 /* NunitoSans7pt-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

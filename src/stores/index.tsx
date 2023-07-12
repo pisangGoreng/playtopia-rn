@@ -6,8 +6,7 @@ import {
 import {setupListeners} from '@reduxjs/toolkit/query';
 import {persistReducer, persistStore} from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {logger} from 'redux-logger';
-// import createDebugger from 'redux-flipper';
+import createDebugger from 'redux-flipper';
 
 import {api} from './apiSlice';
 import citiesReducer from './citiesSlice';
@@ -32,11 +31,7 @@ const store = configureStore({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware({
     serializableCheck: false,
-  }).concat(
-    api.middleware,
-    // logger,
-    // createDebugger(),
-  ),
+  }).concat(api.middleware, createDebugger()),
 });
 
 export const persistor = persistStore(store);

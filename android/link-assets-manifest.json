@@ -30,11 +30,11 @@
       "sha1": "861e01340ac865e9f1dd922ea6a2d24c4729cbea"
     },
     {
-      "path": "src/assets/fonts/NunitoSans_10pt-Regular.ttf",
+      "path": "src/assets/fonts/NunitoSans10pt-Regular.ttf",
       "sha1": "c4bc36919dfa9ee086b71d7b2796fafc22249b97"
     },
     {
-      "path": "src/assets/fonts/NunitoSans_7pt-Regular.ttf",
+      "path": "src/assets/fonts/NunitoSans7pt-Regular.ttf",
       "sha1": "466635ba024c43f741e320148a159557fd732ec0"
     }
   ]

@@ -7,7 +7,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingLeft: horizontalScale(24),
     paddingRight: horizontalScale(16),
-    paddingBottom: horizontalScale(16),
+    paddingBottom: verticalScale(8),
+    paddingTop: verticalScale(7),
+    backgroundColor: COLORS.white,
   },
   buttonContainer: {
     width: horizontalScale(64),

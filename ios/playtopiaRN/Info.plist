@@ -60,8 +60,8 @@
 		<string>DarkerGrotesque-Medium.ttf</string>
 		<string>DarkerGrotesque-Regular.ttf</string>
 		<string>DarkerGrotesque-SemiBold.ttf</string>
-		<string>NunitoSans_10pt-Regular.ttf</string>
-		<string>NunitoSans_7pt-Regular.ttf</string>
+		<string>NunitoSans10pt-Regular.ttf</string>
+		<string>NunitoSans7pt-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

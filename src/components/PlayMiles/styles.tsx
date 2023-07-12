@@ -8,10 +8,10 @@ import {COLORS} from '../../utils/colors';
 
 const styles = StyleSheet.create({
   playMilesContainer: {
-    width: '100%',
     height: verticalScale(44),
     borderRadius: scaleFontsSize(12),
     flexDirection: 'row',
+    marginHorizontal: horizontalScale(16),
   },
   playMilesItemContainer: {
     flex: 1,

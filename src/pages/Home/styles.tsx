@@ -11,15 +11,22 @@ const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
   backgroundContainer: {
     width,
-    height: verticalScale(225),
+    height: verticalScale(190),
+    backgroundColor: 'red',
+  },
+  topContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: horizontalScale(16),
+    marginHorizontal: horizontalScale(16),
   },
   contentContainer: {
     paddingHorizontal: horizontalScale(16),
     position: 'absolute',
     zIndex: 10,
     alignSelf: 'center',
-    top: verticalScale(162),
-
+    top: verticalScale(153),
     justifyContent: 'center',
     alignItems: 'center',
     // backgroundColor: 'red',
@@ -41,11 +48,9 @@ const styles = StyleSheet.create({
   bannerContainer: {
     width: '100%',
     marginTop: verticalScale(32),
-    // backgroundColor: 'red',
-    marginBottom: 100,
   },
   bannerScrollContainer: {
-    marginVertical: verticalScale(16),
+    marginTop: verticalScale(16),
     flexDirection: 'row',
   },
   bannerItemContainer: {

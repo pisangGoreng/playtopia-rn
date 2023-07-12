@@ -1,17 +1,16 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {View, Text, ScrollView} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 import styles from './styles';
 import globalStyles from '../../assets/styles/globalStyles';
 import {COLORS} from '../../utils/colors';
 import {useGetCitiesQuery} from '../../services/citiesApi';
-import {Icity} from '../../typings/cities';
-
-// Components
 import SearchBar from '../SearchBar';
 import CitySkeleton from '../CitySkeleton';
 import City from '../City';
+import {Icity} from '../../typings/cities';
+import {IRootState} from '../../stores';
 
 const {grotesque20Bold, rowCenter, ph16, nunito12Bold, flex1, grotesque18Bold} =
   globalStyles;
@@ -22,13 +21,15 @@ const {
   horionztalLineSeparator,
   citiesContainer,
   cityContainer,
-  notFoundContainer,
+  notFound,
 } = styles;
 
 const CityFilter = () => {
   const {data: cities, isLoading} = useGetCitiesQuery();
 
-  const searchParams = useSelector(({cities}) => cities.searchParams);
+  const searchParams = useSelector(
+    (state: IRootState) => state.cities.searchParams,
+  );
 
   const filteredCities =
     Array.isArray(cities) &&
@@ -46,11 +47,7 @@ const CityFilter = () => {
 
       <View style={[rowCenter, ph16]}>
         <View style={horionztalLine} />
-        <View style={horionztalLineSeparator}>
-          <Text style={[nunito12Bold, {color: COLORS.battleshipGray}]}>
-            atau
-          </Text>
-        </View>
+        <Text style={[nunito12Bold, horionztalLineSeparator]}>atau</Text>
         <View style={horionztalLine} />
       </View>
 
@@ -70,11 +67,7 @@ const CityFilter = () => {
           ))}
 
         {Array.isArray(filteredCities) && filteredCities.length === 0 && (
-          <View style={notFoundContainer}>
-            <Text style={[grotesque18Bold, {color: COLORS.indigoDye}]}>
-              Tidak ditemukan
-            </Text>
-          </View>
+          <Text style={[notFound, grotesque18Bold]}>Tidak ditemukan</Text>
         )}
       </ScrollView>
     </View>
