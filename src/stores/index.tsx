@@ -41,4 +41,4 @@ setupListeners(store.dispatch);
 export default store;
 
 // * for reset all reducer state
-// persistor.purge();
+persistor.purge();

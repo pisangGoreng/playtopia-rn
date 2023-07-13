@@ -16,7 +16,6 @@ import CityFilter from '../../components/CityFilter';
 import BadgeNotification from '../../components/BadgeNotification';
 import {COLORS} from '../../utils/colors';
 import Banner from '../../components/Banner';
-// import StatusBar from '../../components/StatusBar';
 
 const {
   nunito12Bold,

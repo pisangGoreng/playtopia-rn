@@ -18,9 +18,7 @@ export const citiesApi = api.injectEndpoints({
       }),
       // providesTags: ['Cities'],
       invalidatesTags: ['Cities'],
-      transformResponse: (cities: {allCities: IallCity}) => {
-        return cities.allCities;
-      },
+      transformResponse: (cities: {allCities: IallCity}) => cities.allCities,
     }),
   }),
   overrideExisting: true,
