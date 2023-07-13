@@ -1,16 +1,19 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
 import {NavigationContainer} from '@react-navigation/native';
 
-import store from './src/stores';
+import store, {persistor} from './src/stores';
 import BottomTabs from './src/navigations/BottomTabs';
 
 function App(): JSX.Element {
   return (
     <Provider store={store}>
-      <NavigationContainer>
-        <BottomTabs />
-      </NavigationContainer>
+      <PersistGate persistor={persistor} loading={null}>
+        <NavigationContainer>
+          <BottomTabs />
+        </NavigationContainer>
+      </PersistGate>
     </Provider>
   );
 }
